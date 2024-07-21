@@ -1,6 +1,7 @@
 import sqlite3
 
-conn = sqlite3.connect('my_database.db')
+# conn = sqlite3.connect('my_database.db')
+conn = sqlite3.connect('my_database.db', check_same_thread=False)
 c = conn.cursor()
 
 # ユーザーテーブルを作成（管理者フラグを追加）
